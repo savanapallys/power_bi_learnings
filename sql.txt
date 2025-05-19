@@ -1,0 +1,432 @@
+TABLE 1
+Col1	col2			
+1	a
+2	b
+3	c
+4	d
+
+TABLE 2
+Col1	col2
+2	A
+3	B          	2 2times 
+3	C		3 3times
+2	D		4 1time
+3	E		1 1 time
+5	F
+
+
+select *
+from tab_1
+left join tab_2
+on tab_1.col1  = tab_2. col1
+
+  1   a  nu
+  2   b  a
+  2   b  d
+  3   c  b 
+  3   c  c 
+  3   c e  
+
+
+
+customer_id, order_id, order_date 
+
+select * from(select  *,dense_rank() over(partinoned by custom_id order by order_date desc  )as rnk
+from tab_1) a
+where rnk =2
+
+
+
+Weather table:
++----+------------+-------------+
+| id | recordDate | temperature |
++----+------------+-------------+
+| 1  | 2015-01-01 | 10          |
+| 2  | 2015-01-02 | 25          |
+| 3  | 2015-01-03 | 20          |
+| 4  | 2015-01-04 | 30          |
++----+------------+-------------+
+
+select * from
+(select *
+lag(temper)over(ordr by record )as prev_te
+from we) as a 
+where tem> prev
+
+
+
+
+
+input_list = [1, 2, 2, 5, 8, 4, 4, 8]
+
+
+in = se
+
+"ABCDE"
+"BCD"
+
+select * from  "abcde"
+intersect
+selec * from "bcd"
+
+select case 
+when abcde like % ||bcd|% then bcd
+else "no match"
+end
+
+
+
+select emp_name from tab_1
+where emp_name like "%a"
+
+%sh%
+
+_r%
+
+a%o
+
+
+
+name id salary
+
+select max(salary) as second highest salary from tab1
+where salary< (select max(salary) from tab1)
+;
+
+
+
+
+
+
+
+We have two tables A & B. They have a single column ID (Integer). 
+
+Table A has 5 records and all of them have value 1.A(1,1,1,1,1)
+
+Table B has 3 records and all of them have value 1.
+B(1,1,1)
+Query:
+Select A.ID, B.ID from A
+Left Join B on B.ID = A.ID;
+ 
+Select A.ID, B.ID from A
+RIGHT Join B on B.ID = A.ID;
+ 
+Select A.ID, B.ID from A
+INNER Join B on B.ID = A.ID;
+ 
+Select A.ID, B.ID from A
+CROSS Join 1=1;
+
+Select A.ID, B.ID from A
+Full outer Join B on B.ID = A.ID;
+
+
+
+a  b       left join   right join  inner join
+1  1        1->  15    1-> 15         15
+1  1
+1  1        
+1
+1
+
+
+a=int(input())
+if a%2== 0 then  not a prime else  prime
+
+if n<=1 5
+return false
+for i in range(2,int(n*0.5)+1)   5*0.5
+if  n % i ==0
+return false
+
+
+
+
+1) Import data from "Test Data for Power BI" excel file.
+
+2) Study the table and Create a drop down Slicer with PORA, PORB O, PORB H, PORC. options.
+
+3) Create a chart showing BL vs Metric_G vs Metric_A for PORA under the POR field.
+
+4) Sum the $_G for Market W for PORBO and display as a card.
+
+
+dead lock,triggers
+
+
+
+
+
+
+
+Orders( OrderID INT, CustomerID INT, OrderDate DATETIME, OrderAmount DECIMAL(10,2)        , Status VARCHAR(20) -- e.g. 'Pending', 'Completed' )  
+Write a SQL code that returns each CustomerID and their total sales (SUM(OrderAmount)) 
+for January 2025, but only for orders where Status = 'Completed'. 
+
+
+
+select CustomerID,sum(OrderAmount) as total sales
+from Orders
+where status = 'Completed'
+and OrderDate>='2025-01-01'
+and OrderDate<'2025-02-01'
+group by CustomerID
+
+
+Write an SQL query to show the total sales, 
+average order value,
+ and number of orders per customer for the last 12 months. 
+Assume you have two tables: Orders and Customer
+
+orders    customer
+
+select 
+sum(sales) as total sales,
+avg(sales)as average order value,
+count(t2.orderid) AS number of orders
+
+from customer t1
+join orders t2
+on t1.customer_id = t2.customer_id
+where t2.orderdate>=dateadd(month,-12.getdate())
+group by 
+t1.cusomer_id,t1.customername
+
+
+
+
+DAX function of total sales; month; previous month sales; growth rate %
+ 
+total_sales = sum(tab1[sales])
+
+
+
+
+
+
+
+box plot
+aspiration
+what u expect this orgn
+
+
+						
+						
+prod	cate	sal amnt	sales date			
+						
+						
+						
+	rank prod  by sales eith in catelg 					
+						
+	Rank Products by Sales Within Each Category					
+	sum of sales = sum(tab[saleamnt])					
+]	rankx([products],[sum fo sales],,desc)					
+						
+	prevous yr = calculate(sum of sales]			,dateadd(date,-1,year)		
+	yoy growth = total sales]					
+		divide(total sales-prev yr),prev yr				
+						
+	emp id 	em naem 	salsay		emp id 	dep 
+						
+	avg salary of each employee by dept					
+						
+select dep,emp id, ,avg(Salary from 						
+ 	(select * 					
+	from tab 1 t1 join tab 2 t2					
+	on t1.emp id = t2.emp id		)  a			
+	group by dep id	, emp id				
+						
+						
+	select *,dense_rank()over ()		over(order by salary) as rn from a			
+
+
+
+Member Id	Transaction Amount
+A	10		sum()
+B	20
+C	30
+D	40
+E	50
+A	60
+B	70
+
+
+need sum with respect to a
+allexcept
+role playing dimesion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using the Orders table, write a query that shows each customer's
+ monthly total sales for the past 6 months, along with their total sales 
+from the previous month, and calculate the month-over-month (MoM) growth rate as a percentage."
+
+
+
+ssume you have orders and customers table, calculate the total sales, 
+average sales per customer in last 6 months
+
+select 
+sum(sales) as total_sales,
+avg(sales) as average_sa
+
+sql
+
+
+
+Write a SQL query to show the total sales, average order value,
+ and the number of orders per customer for the last 12 months.
+ Assume you have two tables: Orders and Customers
+
+
+cut id
+cust_name
+order id
+order amnut
+order date
+
+
+
+select c.custom_id
+c.customername
+count(o.order_id) as number of order
+sum(o.orderamnt)as total sales
+avg(o.otderamnt)as averageorder
+from customer c
+join orders o c.customerid = o.customerid
+where o.orderdate>=date_sub(cutdate(),interval 12 month)
+group by c.customerid,c,customer name
+order by totalsales desc
+
+
+
+
+
+Using the Orders table, write a query that shows 
+each customer's monthly total sales for the past 6 months, 
+along with their total sales from the previous month, 
+and calculate the month-over-month (MoM) growth rate as a percentage."
+
+
+
+with cte as( 
+customer id,
+date_format(orderdate,"yyyy-mm")as monthsales
+sum(orderamnt) as totalsales
+from order
+where
+orderdate>=date_sub(curdate(),interval 6 month) 
+group by customer,id,date_format(orderdat,"yyyy-mm")
+
+
+)
+select 
+curr.customer id,
+curr.monthsales
+curr.total sales
+prev.totalsales as previos mont sales
+
+case when prev.totalsales is null then null
+     else round(((curr.totalsales - prev.totalsales)/prev.totalsales)*100,2)
+end as month-over-mont
+
+from cte
+left join 
+monthlysales prev
+on curr.customer id = prev.customerid
+and curr.montsales = date_format(date_add( str_to_date(prev.salesmont)
+order by 
+curr.customer id,curr.salesmonth
+
+
+
+
+
+
+
+
+The end goal is to generate a PBI report that display MoM growth rate,
+ what DAX function you need and what are they
+
+
+total_Sales  = sum(tab[sale])
+
+prevuous_ montr=calulate([total_sales],prevousmont(date[date])
+
+mom groth = divide((total_sales]-[prevouus_montr]),prevouus_montr)
+
+
+
+total_sales = sum(sales[sales_amnt])
+
+last_year  = calculate([total_sales],sameperiodlastyear(orders[orderdate])
+
+yoy growth % = Divide(([total_sales]- [last_year]),[last_year])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

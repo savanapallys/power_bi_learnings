@@ -1,0 +1,77 @@
+DATEADD(<dates>,<number_of_intervals>,<interval>)
+
+DATESBETWEEN(<Dates>, <StartDate>, <EndDate>)
+
+DATESINPERIOD(<dates>, <start_date>, <number_of_intervals>, <interval>)
+
+CALENDAR(<start_date>, <end_date>)
+
+CALENDARAUTO([fiscal_year_end_month])
+
+CALENDARAUTO(3) will return all dates between April 1, 2010 and March 31, 2012
+
+DATEDIFF(<Date1>, <Date2>, <Interval>)
+
+EDATE(<start_date>, <months>)
+
+EOMONTH(<start_date>, <months>)
+
+WEEKDAY(<date>, <return_type>)
+
+ALLEXCEPT(<table>,<column>[,<column>[,…]])
+
+ALLSELECTED([<tableName> | <columnName>[, <columnName>[, <columnName>[,…]]]] )
+
+ALL( [<table> | <column>[, <column>[, <column>[,…]]]] )
+
+FILTER(<table>,<filter>)
+
+LOOKUPVALUE (
+    <result_columnName>,
+    <search_columnName>,
+    <search_value>
+    [, <search2_columnName>, <search2_value>]…
+    [, <alternateResult>]
+)
+
+
+
+Running Total = 
+CALCULATE(
+    SUM(Sales[Amount]),
+    FILTER(
+        ALLSELECTED(Sales[Date]),
+        Sales[Date] <= MAX(Sales[Date])
+    )
+)
+
+
+
+Sales Last 6 Months = 
+CALCULATE(
+    SUM(Sales[Amount]),
+    DATESINPERIOD(
+        'Date'[Date],
+        MAX('Date'[Date]),
+        -6,
+        MONTH
+    )
+)
+
+
+
+xTOPN(<N_value>, <table>, <orderBy_expression>, [order])
+
+
+Top 5 Product Sales =
+CALCULATE(
+    [Total Sales],
+    FILTER(
+        TOPN(5, VALUES(Sales[ProductName]), [Total Sales], DESC),
+        TRUE
+    )
+)
+
+
+
+

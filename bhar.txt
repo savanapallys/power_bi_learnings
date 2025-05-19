@@ -1,0 +1,151 @@
+i p  r  c  t   o
+
+role:- role is mainly on the data cleaning and reporting side so working as bi developer 
+contributor:- as developer  i have to create the end user document  for all the things that u will be showing on the dashboard get the raw data from the source then pull any specific
+tool etl finally pulling it in power bi where u are doing most of the cleaning and transformation and analyszing it with the help of different charts or visuals with the help of all
+kpi shown on dashboard we able to manage the supply chain showing the end users demand and supply deficit of defferent product the data we are getting from the source is the raw data
+we have been focusing on how we can make it credible and hence maintin supply chain my role is mainly on the data cleaing and reporting side so working here as a bi developer 
+
+atliQ Grands owns multiple five-star hotels across India. They have been in the hospitality industry for the past 20 years. Due to strategic moves from other competitors and ineffective decision-making in management, AtliQ Grands are losing its market share and revenue in the luxury/business hotels category. As a strategic move, the managing director of AtliQ Grands wanted to incorporate “Business and Data Intelligence” to regain their market share and revenue.
+we are getting from the source is the raw data which is  unstructured and unclean we have been focusing on how we can make it credible 
+role:- role is mainly on the data cleaning and reporting side so working as bi developer  in power bi where u are doing most of the cleaning and transformation and analyszing it with the help of different charts or visuals with the help of all
+kpi shown on dashboard  KPIs like realization percentages, YOY growth, and trend indicators
+
+
+ 
+Promote headers
+Rename columns
+Remove top rows
+Remove columns
+Pivot columns
+unPivot columns
+Replace Values
+Remove values
+ Splitting and Merging Columns
+
+
+reference and duplicate data 
+
+
+ Key Concepts of Power BI Embedded:
+Embedded Analytics	Integrate Power BI visuals (reports, dashboards, tiles) into web apps
+Power BI Workspace	Reports must be published to a workspace in a Power BI service account.
+Row-Level Security (RLS)	Ensures that users only see data relevant to them.
+
+
+
+
+There are three different types of gateways, each for a different scenario:
+
+On-premises data gateway: Allows multiple users to connect to multiple on-premises data sources. With a single gateway installation, you can use an on-premises data gateway with all supported services. This gateway is well-suited to complex scenarios where multiple people access multiple data sources.
+
+On-premises data gateway (personal mode): Allows one user to connect to data sources and can’t be shared with others. An on-premises data gateway (personal mode) can only be used with Power BI. This gateway is well-suited to scenarios where you’re the only person who creates reports and you don't need to share any data sources with others.
+
+Virtual network data gateway: Allows multiple users to connect to multiple data sources secured using virtual networks. No installation is required because it's a Microsoft managed service. This gateway is well-suited to complex scenarios where multiple people access multiple data sources.
+
+
+Power BI Dataflows are a self-service ETL (Extract, Transform, Load) tool in Power BI that allows you to ingest, transform, and store data in the Power BI service using Power Query Online. Think of dataflows as centralized, reusable data pipelines that feed datasets across multiple reports.
+
+
+
+
+Use a Star Schema
+Remove unused columns and tables
+Minimize use of ALL and REMOVEFILTERS
+. Use Performance Analyzer Tool
+optimize your data model by limiting data, using appropriate data types, and avoiding unnecessary columns
+Simplify Measures: Avoid complex DAX measures and use simpler functions. 
+Use Variables: Use DAX variables to improve performance and readability. 
+
+se aggregated tables and let Power BI auto-select them.
+
+Avoid auto date/time hierarchy (turn it off in Options).
+
+Use measures instead of calculated columns where possible.
+
+Avoid too many visuals/slicers on one page.
+
+
+
+
+
+iews (how often the report/dashboard was opened).
+
+Unique viewers (how many individual users interacted with the report).
+
+Filters used (which filters were applied during viewing).
+
+Time spent on each report/dashboard.
+
+Report Views: Number of times the report was viewed within a specified period (last 7 days, 30 days, etc.).
+
+Unique Users: Number of distinct users who have interacted with the report.
+
+Average Time Spent: The average duration users spent on the report.
+
+View Trends: How views are distributed over time (e.g., peaks in usage during certain days/times).
+
+Interactions: How users are interacting with slicers, filters, or visuals.
+
+
+
+he flow of execution for the Power BI gateway
+Gateway installed on a machine in the on-premises domain. During this installation, credentials are stored in local and Power BI services.
+Credentials entered for the data source in Power BI are encrypted and then stored in the cloud. Only the gateway can decrypt the credentials.
+Power BI service kicks off a dataset refresh; this happens through a Scheduler service in Power BI.
+Data Movement Service analyses the query and pushes it to the appropriate service bus instance.
+There is a queue of requests on the service bus. Gateway pulls the bus for pending requests.
+Gateway gets the query and executes it on the data source.
+After getting the result, the gateway pushes that back to Power BI.
+
+
+
+
+
+
+Power BI Viewer role
+As is self-explanatory by the title of this Power BI role, these kinds of users can view and interact with reports and dashboards without changing their contents. They have the lowest level of control over the data and the report.
+
+2. Power BI Contributor role
+Apart from being able to view and interact with reports and dashboards, this user type goes a step further by being able to create, edit, copy, and delete items in a Power BI workspace, publish reports, schedule refreshes, and modify gateways.
+
+3. Power BI Member role
+As with the contributor user type above, this user type can do all that the preceding user types can do. In addition, the member user type can also feature dashboards on the service, share items, allow others to reshare items, and publish or republish. This role can also add other users to the viewer or contributor role.
+
+4. Power BI Admin role
+This user type can carry out all functions of the previous user types as well as add and remove users, including other admins.
+
+
+
+Max Dataset Size	1 GB	1 GB	100 GB	400 GB
+Data Refresh Frequency	Daily (manual)	8/day	48/day	48/day
+storage 		1       10	100tb	100tb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

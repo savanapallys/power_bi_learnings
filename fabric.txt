@@ -1,0 +1,78 @@
+Microsoft Fabric is an all-in-one analytics solution for enterprises that covers everything from data movement to data science, Real-Time Analytics, and business intelligence. It offers a comprehensive suite of services, including data lake, data engineering, and data integration, all in one place.
+
+With Fabric, you don't need to piece together different services from multiple vendors. Instead, you can enjoy a highly integrated, end-to-end, and easy-to-use product that is designed to simplify your analytics needs
+
+lakehouse designed to store,mangae,analyze both structured,unstructured data with in a unified storage sym.
+
+in datawarehouse we can perform read write
+
+in lakehouse read only
+
+
+
+
+kt
+
+data mart
+veriqa datawarehoiuse
+time intelligence 
+ml
+migrating saas to power bi
+getting requirements from clients	
+performance
+ui ux ]
+making things understand
+data modeling
+data cleaning in sql
+
+
+
+
+var a=divide(budget of jan,days(jan))
+b = dvied(budget of feb,days(frb)
+
+swith
+
+
+Member Id	Transaction Amount	Sum(Transaction Amount)
+A	10	 
+B	20	 
+C	30	 
+D	40	 
+E	50	 
+A	60	 
+B	70	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
