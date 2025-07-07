@@ -1,0 +1,115 @@
+Microsoft updates June 2025
+ai data set so can delete unnecessary colms here like etl
+transanalytics means we can update data using buttons and do analytics
+
+related:- lookup value from one side of reln into many side of reltn
+related table:- lookup from many side of reln in one side of reltn
+
+if new files added u need to combine queries to get new data if dont have intenet or anything so no need for incremental refresh
+append/combine data will do union all we need to remove duplicate to make union
+
+is currentmonth = if(year(dimdate[date].[date]) = year(today()) && month(dimdate[date].[date]) = month(today()),1,0)
+
+in enter data we can store static data only
+query dependencies means which file coming from what source
+
+using xmla end point we can refresh single table ,go to power bi admin--setting--xmla read/write copy server path --paste in ssms then refresh
+
+disconnected dim is when we select date in line chart it will show that point only but if u need cumulative we need to create disconnected date table and write dax queru for that
+custom theme will store as json format
+
+when to use .date in calculation is when u use hiercharchy in table then need to use .date else no need to use .date in measure
+by using tabular editor we can create calculation groups where we can change measures dynamically by using selectedvlue
+
+dax studio will give performance , reduce size x,missing keys by using vertipaq analyzer 
+
+alm toolkit app lifcycle mgmt. used to compare dataset,code merging,esy deployment
+
+personalize visual perspective
+
+Indian paradise
+
+
+
+normailisation types
+colmns 20-25  data size 25k rows
+video,audio falls under unstructured data as its not tablued,dont have columns data types,aggregatins
+
+1 fact, 4 dimension
+fact table columns like 30,40,50
+fact table rows like 4,5,6M
+dimension columns 8,10,12  rows 1k,2k,4k,5k
+
+
+today() will give date only now() will give date and time as well
+hasonevalue(),nonblank().osblank
+
+cout will ignore null
+
+report level filter override the visual level and page level filter
+
+Power BI - Values() function - GeeksforGeeksThe VALUES function in Power BI DAX returns a single-column table containing distinct, unique values from a specified column or table.
+
+mapping table = calculatetable(values('electic[muncipal]).not(isblank(electric[muncipality])))
+
+filter&all fn will degrade power bi report performance in dorect query
+
+communication with client will be at project starts, demo of report, handover
+
+data groups can be created to group values(quality) like advertising,software  in columns to show the bar or column charts
+
+source -->landing -->raw-->data vault -->view
+
+
+aver of al reions = summarize(orders,orders[region],"aver of price",avg(product[price]))
+
+  
+aggeregation fn				    date&time fn		     	timeinteligence fin                logical fn				filter
+sum,sumx				calendar,calendarauto,edate,eomonth   totalmtd,totalqtd,totalytd           if,and,or,not,switch			calculate,calclatetable
+avg,avgx,avga				today&now			      dateadd,datebetween,datesinperiod						all(3),filter
+min,max,count,countx,countblank,countrows  day,month,quarter,year		parallel period,sameperiodlastyear		
+distinctcount					datediff,weekday,weeknum				
+
+
+
+
+new date = if('caleder'[date]=max('ca;emder'[date]),"new date",format('calender'[date],"dd/mm/yyyy"))
+
+types of analysixs:
+desctiptive   predictive
+
+RL_prd_view
+rl_dev_view
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
